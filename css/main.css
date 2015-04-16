@@ -1,0 +1,123 @@
+body {
+	margin: 0;
+	text-align: center;
+	font-family: 'Open Sans';
+}
+
+.header {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #3498db;
+	margin-bottom: 10px;
+	color: #fff;
+	font-size: 18pt;
+	font-weight: 900;
+	text-shadow: 0px -1px 0px #2980b9;
+	border-bottom: 5px solid #2980b9;
+}
+
+.home label {
+	display: block;
+	margin: auto;
+
+	font-weight: 700;
+	font-size: 16pt;
+}
+
+.home select {
+	display: block;
+	margin: auto;
+	margin-bottom: 20px;
+	width: 80%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 16pt;
+}
+
+.home button {
+	display: block;
+	margin: auto;
+	margin-top: 50px;
+
+	width: 80%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 16pt;
+	font-weight: 700;
+
+	background: #2ecc71;
+	color: #fff;
+	text-transform: uppercase;
+	border: none;
+	border-bottom: 3px solid #27ae60;
+}
+
+.home button:active {
+	position: relative;
+	top: 3px;
+	border-bottom: none;
+}
+
+.home .rankings {
+	width: 90%;
+	margin: auto;
+	margin-top: 40px;
+}
+
+.home .rankings-title {
+	font-size: 16pt;
+	text-align: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	margin-bottom:5px;
+
+	font-weight: 700;
+	color: #fff;
+	background: #3498db;
+	border-bottom: 3px solid #2980b9;
+}
+
+.home .player	{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background: #fff;
+	border: 2px solid #ccc;
+	padding: 5px;
+	box-shadow: 0 0 2px rgba(0,0,0,.2);
+}
+
+.home .player .player-element {
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 10px;
+	border-bottom: 2px dotted #ccc;
+}
+
+.home .player .left {
+	float: left;
+	text-align: left;
+	font-weight: 900;
+}
+
+.home .player .right {
+	text-align: right;
+}
+
+.home .player .profile {
+	display: block;
+	background: #ccc;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	padding: 10px 10px 10px 10px;
+	border-bottom: 3px solid #999;
+	color: #fff;
+	font-weight: 900;
+}
+
+.home .player .profile:active {
+	margin-top: 13px;
+	border-bottom: none;
+}

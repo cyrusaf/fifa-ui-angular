@@ -1,0 +1,32 @@
+<div class="home">
+  <label>Winner</label>
+  <select ng-model="winner" ng-options="user._id as user.name for user in users">
+  </select>
+
+  <label>Loser</label>
+  <select ng-model="loser" ng-options="user._id as user.name for user in users">
+  </select>
+
+  <button ng-click="submit()">Submit</button>
+
+  <div class="rankings">
+  	<div class="rankings-title">Rankings</div>
+  	<div class="player" ng-repeat="user in users">
+      <div class="player-element">
+        <div class="left">POSITION</div> <div class="right pos">{{$index + 1}}</div>
+      </div>
+      <div class="player-element">
+        <div class="left">NAME</div> <div class="right name">{{user.name}}</div>
+      </div>
+      <div class="player-element">
+        <div class="left">ELO</div> <div class="right elo">{{user.elo}}</div>
+      </div>
+      <div class="player-element">
+        <div class="left">SCORE</div> <div class="right score">{{user.wins}} - {{user.losses}}</div>
+      </div>
+
+      <a class="profile">PROFILE</a>
+
+  	</div>
+  </div>
+</div>
