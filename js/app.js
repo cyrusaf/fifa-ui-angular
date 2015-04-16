@@ -1,6 +1,7 @@
 var app = angular.module('app', [
   'ngRoute',
-  'controllers'
+  'controllers',
+  'n3-line-chart'
 ]);
 
 app.config(['$routeProvider',
@@ -21,7 +22,7 @@ app.config(['$routeProvider',
 ]);
 
 app.service('globals', function() {
-  var IP = 'http://10.101.22.62:9001';
+  var IP = 'http://198.199.109.59:9001';
 
   return {
     getIP: function() {

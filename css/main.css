@@ -138,3 +138,7 @@ a {
 .detail .elo {
 	color: #666;
 }
+
+#chart {
+	height: calc(100vh - 300px);
+}

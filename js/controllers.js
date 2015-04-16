@@ -42,12 +42,37 @@ controllers.controller('homeController', ['$scope', '$http', 'globals', function
 
 controllers.controller('playerController', ['$scope', '$http', 'globals', '$routeParams', function ($scope, $http, globals, $routeParams) {
 	$scope.player = {};
+	$scope.chartData = [];
+	$scope.chartOptions = {
+		axes: {
+			x: {type: 'date', ticks: 0},
+			y: {type: 'linear'}
+		},
+		series: [
+			{y: 'value', color: 'steelblue', thickness: '2px', type: 'area', striped: true, label: 'ELO'}
+		],
+		lineMode: 'linear',
+		tension: 0.7,
+		tooltip: {mode: 'scrubber', formatter: function(x, y, series) {return 'ELO: ' + y;}},
+		drawLegend: false,
+		drawDots: true,
+		columnsHGap: 5
+	};
 
 	// Make request for player
 	$http.get(globals.getIP() + "/players/" + $routeParams.playerID)
 		.success(function(data, status, headers, config) {
 			$scope.player = data;
 		});
+
+	// Make request for chart data
+	$http.get(globals.getIP() + "/players/" + $routeParams.playerID + "/change")
+		.success(function(data, status, headers, config) {
+
+			console.log(data);
+			$scope.chartData = data;
+		});
+
 }]);
 
 function suffix(i) {
