@@ -42,11 +42,11 @@ a {
 .home button {
 	display: block;
 	margin: auto;
-	margin-top: 50px;
+	margin-top: 25px;
 
 	width: 80%;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	font-size: 16pt;
 	font-weight: 700;
 
@@ -55,6 +55,7 @@ a {
 	text-transform: uppercase;
 	border: none;
 	border-bottom: 3px solid #27ae60;
+	text-shadow: 0px -1px 0px #27ae60;
 }
 
 .home button:active {
@@ -66,7 +67,7 @@ a {
 .home .rankings {
 	width: 90%;
 	margin: auto;
-	margin-top: 40px;
+	margin-top: 30px;
 }
 
 .home .rankings-title {
@@ -81,6 +82,7 @@ a {
 	color: #fff;
 	background: #3498db;
 	border-bottom: 3px solid #2980b9;
+	text-shadow: 0px -1px #2980b9;
 }
 
 .home .player	{
