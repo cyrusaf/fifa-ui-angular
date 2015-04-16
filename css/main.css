@@ -4,6 +4,11 @@ body {
 	font-family: 'Open Sans';
 }
 
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
 .header {
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -115,6 +120,8 @@ body {
 	border-bottom: 3px solid #999;
 	color: #fff;
 	font-weight: 900;
+	text-decoration: none;
+	text-shadow: 0 -1px #999;
 }
 
 .home .player .profile:active {
