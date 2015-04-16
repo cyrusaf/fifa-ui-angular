@@ -128,3 +128,13 @@ a {
 	margin-top: 13px;
 	border-bottom: none;
 }
+
+.detail .name {
+	font-size: 18pt;
+	font-weight: 900;
+	color: #333;
+}
+
+.detail .elo {
+	color: #666;
+}

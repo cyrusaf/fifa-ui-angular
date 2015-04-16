@@ -25,7 +25,7 @@ controllers.controller('homeController', ['$scope', '$http', 'globals', function
   	}
 
   	$http({
-	    url: "http://104.236.138.84:9001/matches",
+	    url: globals.getIP() + "/matches",
 	    method: "POST",
 	    data: JSON.stringify({
 	    	player1: $scope.winner,
@@ -39,3 +39,28 @@ controllers.controller('homeController', ['$scope', '$http', 'globals', function
 		});
 	}
 }]);
+
+controllers.controller('playerController', ['$scope', '$http', 'globals', '$routeParams', function ($scope, $http, globals, $routeParams) {
+	$scope.player = {};
+
+	// Make request for player
+	$http.get(globals.getIP() + "/players/" + $routeParams.playerID)
+		.success(function(data, status, headers, config) {
+			$scope.player = data;
+		});
+}]);
+
+function suffix(i) {
+    var j = i % 10,
+        k = i % 100;
+    if (j == 1 && k != 11) {
+        return i + "st";
+    }
+    if (j == 2 && k != 12) {
+        return i + "nd";
+    }
+    if (j == 3 && k != 13) {
+        return i + "rd";
+    }
+    return i + "th";
+}

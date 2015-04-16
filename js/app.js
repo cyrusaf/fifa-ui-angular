@@ -10,6 +10,10 @@ app.config(['$routeProvider',
 			templateUrl: 'partials/home.html',
 			controller: 'homeController'
 		}).
+    when('/player/:playerID', {
+			templateUrl: 'partials/player.html',
+			controller: 'playerController'
+		}).
 		otherwise({
 			redirectTo: '/'
 		});
