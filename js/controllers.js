@@ -34,6 +34,9 @@ controllers.controller('homeController', ['$scope', '$http', 'globals', function
 	    })
 		}).success(function(data, status, headers, config) {
 			getUsers();
+			alert("Submitted!");
+			$scope.winner = undefined;
+			$scope.loser = undefined;
 		}).error(function(data, status, headers, config) {
 		    console.log("HTTP Error");
 		});
